@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './FavButton.css';
 
 class FavButton extends React.Component {
   constructor() {
     super();
     this.state = {
-      liked: false
+      added: false
     };
     this.handleClick = this.handleClick.bind(this);
   }
