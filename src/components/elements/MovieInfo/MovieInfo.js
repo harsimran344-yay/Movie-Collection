@@ -4,6 +4,7 @@ import { IMAGE_BASE_URL, POSTER_SIZE } from '../../../config';
 // import FontAwesome from 'react-fontawesome';
 import MovieThumb from '../MovieThumb/MovieThumb';
 import PropTypes from 'prop-types';
+import FavouriteButton from '../FavouriteButton/FavouriteButton';
 import './MovieInfo.css';
 
 
@@ -28,16 +29,20 @@ const MovieInfo = ({movie, directors}) => {
                         <meter min="0" max="100" optimum ="100" low="40" high="70" value={movie.vote_average * 10} ></meter>
                         <p className="rmdb-score">{movie.vote_average}</p>
                     </div>
-                   
+
                     <h3>Director:</h3>
                     {directors.map ( (element, i ) => {
                         return <p key= {i} className="rmdb-director">{element.name}</p>
                     })}
+                    <div>
+                      <FavouriteButton movie={movie}/>
+                    </div>
                 </div>
             </div>
         </div>
     )
 }
+
 
 MovieInfo.propTypes = {
     movie: PropTypes.object,

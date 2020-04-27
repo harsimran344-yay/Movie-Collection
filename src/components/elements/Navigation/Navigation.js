@@ -8,14 +8,14 @@ const Navigation = ( {movie} ) => {
         <div className="rmdb-navigation">
 
             <div className="rmdb-navigation-content">
-            <p><NavLink to={'/'} exact>Home</NavLink></p>
-            <p><NavLink to={'/about'}>About</NavLink></p>
-            <p><NavLink to={'/your-movies'}>Your Movies</NavLink></p>
-    
+              <p><NavLink to={'/'} exact>Home</NavLink></p>
+              <p><NavLink to={'/about'}>About</NavLink></p>
+              <p><NavLink to={'/your-movies'}>Your Movies</NavLink></p>
+              <p><NavLink to={'/favourites'}>Favourites</NavLink></p>
             </div>
 
         </div>
-        
+
     )
 }
 Navigation.propTypes = {
