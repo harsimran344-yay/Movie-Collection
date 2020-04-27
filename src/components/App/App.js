@@ -5,6 +5,7 @@ import Navigation from '../elements/Navigation/Navigation';
 import Home from '../Home/Home';
 import Movie from '../Movie/Movie';
 import About from '../elements/About/About';
+import Favourites from '../elements/Favourites/Favourites';
 import NotFound from '../elements/NotFound/NotFound';
 
 
@@ -15,13 +16,14 @@ const App = () => (
 			<Header />
 			<Navigation />
 			<Switch>
-				<Route path={'/'} exact><Home /></Route>
-				<Route path={'/about'}><About /></Route>
-                <Route path="/:movieId" component={Movie} exact/>
-				{/* <Route path={'/./your-movies'} exact><YourMovies /></Route> */}
-				<Route path={'/./NotFound'}><NotFound /></Route>
+        <Route path={'/'} exact><Home /></Route>
+        <Route path={'/about'}><About /></Route>
+        <Route path={'/favourites'}><Favourites /></Route>
+        <Route path="/:movieId" component={Movie} exact/>
+        {/* <Route path={'/./your-movies'} exact><YourMovies /></Route> */}
+        <Route path={'/./NotFound'}><NotFound /></Route>
 			</Switch>
-			
+
 		</div>
 	</Router>
     );
